@@ -1,0 +1,219 @@
+.nd-header {
+    display: flex;
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $dark-gray-color;
+    z-index: 5;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: height 250ms ease-out;
+
+    &.open-menu {
+        height: 100%;
+    }
+
+    .logo-link {
+        margin-left: 20px;
+    }
+
+    .logo-image {
+        height: 21px;
+        margin-top: 24px;
+    }
+
+    button {
+        background-color: inherit;
+        border: none;
+        margin-right: 20px;
+        height: $header-height;
+    }
+
+    .nd-navigation {
+        display: none;
+        margin-right: 34px;
+    }
+
+    .nd-navigation-item {
+        font-size: 26px;
+        color: $font-color-light;
+        text-transform: uppercase;
+        margin-left: 54px;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $yellow-color;
+        }
+
+        &.active {
+            color: $yellow-color;
+            border-bottom: 2px solid $yellow-color;
+            border-radius: 2px;
+        }
+    }
+
+    .nd-menu {
+        width: 100%;
+        flex-basis: 100%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: -$header-height;
+    }
+
+    .nd-menu-item {
+        font-size: 35px;
+        color: $font-color-light;
+        margin: 10px;
+
+        &.active,
+        &:hover,
+        &:active,
+        &:focus {
+            color: $yellow-color;
+        }
+    }
+
+    .nd-menu-footer {
+        position: absolute;
+        bottom: 20px;
+        color: $font-color-light;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .social-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        background-color: white;
+        border-radius: 50%;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $yellow-color;
+        }
+    }
+
+    .privacy-and-terms-link {
+        width: 105px;
+        text-align: center;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $yellow-color;
+        }
+    }
+
+    .social-icon {
+        height: 50%;
+    }
+
+    @media #{$large-up} {
+        position: relative;
+        background-color: transparent;
+        align-items: center;
+
+        .header-filler {
+            display: none;
+        }
+
+        .logo-link {
+            margin-left: 30px;
+        }
+
+        .logo-image {
+            margin-top: 0;
+        }
+
+        .nd-navigation {
+            display: block;
+        }
+
+        button {
+            display: none;
+        }
+    }
+}
+
+body.shop {
+    .nd-navigation-item {
+        color: white;
+    }
+
+    .nd-header {
+        background-color: white;
+    }
+
+    .nd-navigation-item {
+        color: #c2c2c2;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #1f1f1f;
+        }
+
+        &.active {
+            color: #1f1f1f;
+        }
+    }
+}
+
+body.videos,
+body.agency {
+    .nd-navigation-item {
+        &.active {
+            color: white;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: white;
+        }
+    }
+}
+
+body.app {
+    .nd-header:not(.open-menu) {
+        background-color: transparent;
+    }
+
+    .nd-navigation-item {
+        color: #c2c2c2;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #1f1f1f;
+        }
+
+        &.active {
+            color: #1f1f1f;
+        }
+    }
+}
+
+.header-filler {
+    height: $header-height;
+    width: 100%;
+    background-color: transparent;
+    display: block;
+
+    @media #{$large-up} {
+        display: none;
+    }
+}

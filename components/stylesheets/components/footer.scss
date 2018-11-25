@@ -1,0 +1,108 @@
+.nd-footer {
+  display: none;
+  background-color: $dark-gray-color;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: $font-color-light;
+  height: $footer-height;
+
+  .logo {
+    margin: 50px;
+    height: 25px;
+  }
+
+  .navigation {
+    padding: 30px;
+    display: flex;
+
+    li {
+      text-transform: uppercase;
+      font-size: 35px;
+      padding-right: 50px;
+      padding-left: 50px;
+      min-width: 78px;
+    }
+  }
+
+  .navigation-link {
+    &:hover, &:active, &:focus {
+      color: $yellow-color;
+    }
+
+    &.active {
+      color: $yellow-color;
+      cursor: default;
+    }
+  }
+
+  .social-list-header {
+    color: white;
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .social-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-top: 12px;
+
+    li {
+      background-color: white;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: block;
+
+      &:hover, &:active, &:focus {
+        background-color: $yellow-color;
+      }
+    }
+  }
+
+  .social-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .social-icon {
+    height: 50%;
+  }
+
+  .subfooter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    align-self: stretch;
+    border-top: 2px solid $gray-color;
+  }
+
+  .privacy-and-terms {
+    display: none;
+    position: absolute;
+    right: 12px;
+    justify-content: space-around;
+    min-width: 200px;
+    top: 38%;
+  }
+
+  .privacy-and-terms-link {
+    &:hover {
+      color: $yellow-color;
+    }
+  }
+
+  @media #{$large-up} {
+    display: flex;
+
+    .privacy-and-terms {
+      display: flex;
+    }
+  }
+}

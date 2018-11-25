@@ -1,0 +1,101 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+html {
+  overflow: auto;
+}
+
+body {
+  font-family: $main-font;
+  letter-spacing: 0.5px;
+  background-color: $gray-color;
+
+  background-image: url(https://res.cloudinary.com/nasdaily/image/upload/v1499019749/bg_pattern_pdqcu0_a7zk4k.svg);
+  background-repeat: repeat;
+  background-position: top;
+  background-size: 60%;
+
+  &.with-overlay {
+    overflow: hidden;
+  }
+
+  &.app {
+    background-image: none;
+    background-color: #1F1F1F;
+  }
+
+  &.shop {
+    background-image: url(https://res.cloudinary.com/nasdaily/image/upload/v1501383337/Nas_shirt_bg_v13rv6_1_w96wwj.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @media #{$small-only} {
+      background-image: url(https://res.cloudinary.com/nasdaily/image/upload/v1506028485/shop_bg_qjvemj.png);
+    }
+  }
+}
+
+button, a {
+  outline-color: $yellow-color;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: $main-font;
+}
+
+input {
+  outline-color: $yellow-color;
+}
+
+.hide {
+  display: none !important;
+}
+
+.content {
+  min-height: calc(100vh - #{$footer-height});
+  position: relative;
+}
+
+.yellow-color {
+  color: $yellow-color;
+}
+
+.white-color {
+  color: white;
+}
+
+.hide-on-small {
+  @media #{$small-only} {
+    display: none !important;
+  }
+}
+
+.show-on-small-only {
+  @media #{$medium-up} {
+    display: none !important;
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+@media #{$small-only} {
+  body {
+    background-size: 75%;
+  }
+
+  .content {
+    height: 100%;
+  }
+}

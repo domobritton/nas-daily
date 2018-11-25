@@ -1,0 +1,432 @@
+.nd-agency {
+  $duration: 350ms;
+  $iconSize: 50px;
+
+  color: white;
+  font-size: 20px;
+
+  .messenger-button-container {
+    display: flex;
+    margin-top: 24px;
+  }
+
+  .messenger-button {
+    background-color: #0A83FB;
+    border-radius: 3px;
+    padding: 15px 40px;
+  }
+
+  .nd-agency-intro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url(/assets/agency/eyes-bg.png), rgba(12, 12, 12, 1);
+    background-repeat: no-repeat;
+    background-color: #1F1F1F;
+    background-size: cover;
+  }
+
+  .nd-agency-intro-header {
+    font-size: 60px;
+    font-family: 'FatFrank', 'Teko', Arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
+
+  .nd-agency-intro-subheader {
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 1px;
+  }
+
+  .nd-agency-intro-cards-container {
+    display: flex;
+    margin-top: 200px;
+  }
+
+  .nd-agency-intro-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    box-shadow: 0px 5px 5px rgb(20,20,20);
+
+    &.card-1 {
+      background-image: url(/assets/agency/card-bg-1.svg), linear-gradient(#575757, #3E3E3E);
+    }
+
+    &.card-2 {
+      background-image: url(/assets/agency/card-bg-2.svg), linear-gradient(#575757, #3E3E3E);
+    }
+
+    &.card-3 {
+      background-image: url(/assets/agency/card-bg-3.svg), linear-gradient(#575757, #3E3E3E);
+    }
+  }
+
+  .agency-card-title {
+    margin-bottom: 24px;
+    margin-top: 12px;
+    font-size: 26px;
+  }
+
+  .agency-card-icon-container {
+    padding-top: 24px;
+    padding-bottom: 6px;
+  }
+
+  .nd-agency-featured-videos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .nd-agency-videos-header {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .nd-agency-videos-tabs-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48px;
+  }
+
+  .nd-agency-featured-video-tab-video-item {
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nd-agency-fav-comment {
+    padding: 24px 48px;
+    padding-bottom: 18px;
+    width: 500px;
+    background-color: #181818;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 36px;
+    position: relative;
+
+    &.left-side-arrow {
+      &:before {
+        width: 0;
+        height: 0;
+        content: '';
+        display: block;
+        border-left: 17px solid transparent;
+        border-right: 17px solid transparent;
+        border-bottom: 17px solid #181818;
+        position: absolute;
+        top: -17px;
+      }
+    }
+
+    &.right-side-arrow {
+      &:before {
+        width: 0;
+        height: 0;
+        content: '';
+        display: block;
+        border-left: 17px solid transparent;
+        border-right: 17px solid transparent;
+        border-bottom: 17px solid #181818;
+        position: absolute;
+        top: -17px;
+        right: 50px;
+      }
+    }
+  }
+
+  .nd-agency-fav-comment-title {
+    color: #535353;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .nd-agency-fav-comment-body {
+    color: #C3C3C3;
+    font-size: 24px;
+    line-height: 1.4;
+    font-family: GeogrotesqueUltraLightItalic;
+    letter-spacing: 0.8px;
+  }
+
+  .featured-video-video-player {
+    .tile {
+      position: relative;
+      font-size: 20px;
+      cursor: pointer;
+      transition: $duration all;
+    }
+
+    .tile:hover .tile__details {
+      opacity: 1;
+    }
+
+    .tile__img {
+      border-radius: 5px;
+      width: 552px;
+    }
+  }
+
+  .featured-video-video-metrics-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .featured-video-video-metric {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 25px;
+
+    img {
+      margin-right: 24px;
+    }
+  }
+
+  .video-metric-logo-container {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .video-metric-logo-container-title {
+    margin-right: 18px;
+    text-transform: uppercase;
+    color: #5D5D5D;
+  }
+
+  .nd-agency-contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #1F1F1F;
+    background-image: url(/assets/agency/world-map-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 270px;
+  }
+
+  .nd-agency-contact-header {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .nd-agency-featured-video-tab-content {
+    > div:nth-child(1) {
+      .featured-video-video-metrics-container {
+        padding-left: 24px;
+      }
+    }
+
+    > div:nth-child(3) {
+      .featured-video-video-player {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  @media #{$small-only} {
+    .nd-agency-intro {
+      padding-top: 75px;
+      background-size: 130% auto;
+      background-position-x: center;
+    }
+
+    .nd-agency-intro-header {
+      width: 300px;
+      font-size: 52px;
+    }
+
+    .nd-agency-intro-subheader {
+      width: 300px;
+      text-align: left;
+
+      br { display: none; }
+    }
+
+    .nd-agency-intro-cards-container {
+      flex-direction: column;
+      margin-top: 100px;
+    }
+
+    .nd-agency-intro-card {
+      margin-bottom: 24px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .nd-agency-featured-video-tab-video-item {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .nd-agency-fav-comment {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 24px;
+
+      &.left-side-arrow,
+      &.right-side-arrow {
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    .featured-video-video-player {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .featured-video-video-metrics-container {
+      width: 100%;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .featured-video-video-metric,
+    .video-metric-logo-container {
+      padding-left: 12px;
+      padding-right: 12px;
+      justify-content: flex-start;
+    }
+
+    .tile__img,
+    .tile {
+      max-width: 100%;
+    }
+
+    .nd-agency-featured-video-tab-content {
+      > div:nth-child(1) {
+        .featured-video-video-metrics-container {
+          padding-left: 0;
+        }
+      }
+
+      > div:nth-child(3) {
+        flex-direction: column-reverse;
+
+        .featured-video-video-player {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media #{$medium-only} {
+    .nd-agency-intro {
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+
+    .nd-agency-intro-cards-container {
+      margin-top: 100px;
+    }
+
+    .nd-agency-intro-card {
+      width: 230px;
+      height: 165px;
+    }
+
+    .nd-agency-featured-video-tab-content {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+
+    .tile__img,
+    .tile {
+      max-width: 100%;
+    }
+
+    .nd-agency-featured-video-tab-video-item {
+      margin-top: 75px;
+    }
+
+    .nd-agency-contact {
+      height: 200px;
+    }
+  }
+
+  @media #{$large-up} {
+    .tile__details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      color: white;
+      font-size: 10px;
+      opacity: 0;
+      transition: $duration opacity;
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: black;
+      }
+
+      &:after {
+        margin-top: (-($iconSize / 2));
+        margin-left: (-($iconSize / 2));
+        width: $iconSize;
+        height: $iconSize;
+        border: 3px solid #ecf0f1;
+        line-height: $iconSize;
+        text-align: center;
+        border-radius: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+      }
+
+      &:before {
+        content: '▶';
+        left: 0;
+        width: 100%;
+        font-size: 30px;
+        margin-left: 7px;
+        margin-top: -7px;
+        text-align: center;
+        z-index: 2;
+      }
+    }
+  }
+}
